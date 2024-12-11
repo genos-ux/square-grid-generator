@@ -32,6 +32,15 @@ btn.addEventListener('click',()=> {
 
         //Apply CSS to the grid container and grid items.
         container.style.cssText = `display: flex;border:1px solid black;flex-wrap:wrap;width: ${gridSize * 10}px;height: ${gridSize * 10}px`;
+
+        //Assuming each item size is 10px;
+        const itemSize = 10;
+        const gridItemStyle = `width: ${itemSize}px;height: ${itemSize}px;border:1px solid black;`;
+
+        const gridItemElements = document.querySelectorAll(".grid-item");
+        gridItemElements.forEach(item => {
+            item.style = gridItemStyle;
+        })
     }
 
     else
